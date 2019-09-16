@@ -153,12 +153,12 @@ function ValidateWeedCoord(plantCoord)
 		local validate = true
 
 		for k, v in pairs(weedPlants) do
-			if GetDistanceBetweenCoords(plantCoord, GetEntityCoords(v), true) < 5 then
+			if GetDistanceBetweenCoords(plantCoord, GetEntityCoords(v), true) < 2 then
 				validate = false
 			end
 		end
 
-		if GetDistanceBetweenCoords(plantCoord, Config.CircleZones.WeedField.coords, false) > 50 then
+		if GetDistanceBetweenCoords(plantCoord, Config.CircleZones.WeedField.coords, false) > 10 then
 			validate = false
 		end
 
